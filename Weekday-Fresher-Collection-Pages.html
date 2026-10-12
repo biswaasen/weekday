@@ -1,0 +1,287 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Weekday Fresher Collection Pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Vollkorn:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: same /jobs collection template (hero → filters → 20 cards + sidebar → related → FAQ); NEW pins mark what changes for fresher pages */
+:root{
+  --bg:#FAF8F2;--card:#FFFFFF;--soft-card:#FFFDF6;--ink:#141414;--on-ink:#FFFFFF;--muted:#4F5560;--soft:#7A7F88;
+  --line:rgba(20,20,20,.1);--line2:rgba(20,20,20,.18);
+  --yellow:#F5C431;--yl:#FFF4CC;--yl-ink:#5B4A12;--yl-line:#F0DC97;
+  --ok:#1D6B3E;--ok-bg:#E3F3E9;--hot:#A3321F;--hot-bg:#FCE4DF;--warn:#8A4B07;--warn-bg:#FDEBD3;--blue:#1E5A9C;--blue-bg:#E5EEF9;
+  --pin:#D9534F;--wa:#1F8F4E;
+  --display:Vollkorn,Georgia,"Times New Roman",serif;--body:Lato,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:16px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#15140F;--card:#1D1C17;--soft-card:#211F18;--ink:#F2EFE6;--on-ink:#141414;--muted:#BEC1C7;--soft:#9A9EA6;
+  --line:rgba(242,239,230,.11);--line2:rgba(242,239,230,.22);--yellow:#F5C431;--yl:#3A3010;--yl-ink:#F5DF94;--yl-line:#5C4C14;
+  --ok:#7FD3A0;--ok-bg:#173225;--hot:#F29A88;--hot-bg:#3B1E18;--warn:#F2B66B;--warn-bg:#3A2A14;--blue:#8DB8EC;--blue-bg:#1A2A3D;--pin:#F08A86;--wa:#6FD39A;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15140F;--card:#1D1C17;--soft-card:#211F18;--ink:#F2EFE6;--on-ink:#141414;--muted:#BEC1C7;--soft:#9A9EA6;
+  --line:rgba(242,239,230,.11);--line2:rgba(242,239,230,.22);--yellow:#F5C431;--yl:#3A3010;--yl-ink:#F5DF94;--yl-line:#5C4C14;
+  --ok:#7FD3A0;--ok-bg:#173225;--hot:#F29A88;--hot-bg:#3B1E18;--warn:#F2B66B;--warn-bg:#3A2A14;--blue:#8DB8EC;--blue-bg:#1A2A3D;--pin:#F08A86;--wa:#6FD39A;color-scheme:dark}
+*,*:before,*:after{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body)}
+button,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:2px}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px}
+/* mock switcher */
+.mockbar{background:var(--ink);color:var(--on-ink);font-size:13.5px}
+.mockbar .wrap{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding-block:10px}
+.mockbar b{color:var(--yellow)}
+.mockbar .sw{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.mockbar button{border:1px solid rgba(255,255,255,.3);background:transparent;color:inherit;border-radius:999px;padding:4px 12px;cursor:pointer;font-size:13px}
+:root[data-theme="dark"] .mockbar button{border-color:rgba(0,0,0,.3)}
+.mockbar button[aria-pressed="true"]{background:var(--yellow);color:#141414;border-color:var(--yellow)}
+.legend{display:inline-flex;align-items:center;gap:6px}
+.new{display:inline-flex;align-items:center;gap:4px;background:var(--pin);color:#fff;font:900 10.5px/1 var(--body);letter-spacing:.06em;border-radius:6px;padding:4px 6px;vertical-align:middle;white-space:nowrap}
+.newbox{outline:2px dashed var(--pin);outline-offset:4px;border-radius:var(--r);position:relative}
+.newbox>.new{position:absolute;top:-12px;right:14px;z-index:2}
+/* nav */
+.nav{margin-top:18px;background:var(--soft-card);border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;gap:24px;padding:12px 18px;flex-wrap:wrap}
+.logo{font:700 24px var(--display);display:flex;align-items:center;gap:8px}
+.logo i{width:24px;height:22px;background:var(--yellow);display:block;clip-path:polygon(0 0,30% 0,50% 55%,70% 0,100% 0,100% 100%,0 100%)}
+.nav ul{display:flex;gap:24px;list-style:none;margin:0 auto;padding:0;font-size:15.5px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:999px;padding:10px 18px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-ink{background:var(--ink);color:var(--on-ink)}
+.btn-wa{background:var(--wa);color:#fff}
+:root[data-theme="dark"] .btn-wa{color:#0d1f15}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-wa{color:#0d1f15}}
+/* hero */
+.crumbs{display:flex;justify-content:center;gap:8px;font-size:15px;color:var(--muted);margin:26px 0 14px;flex-wrap:wrap}
+.crumbs span:last-child{color:var(--ink)}
+.badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.badge{background:var(--ink);color:var(--on-ink);border-radius:8px;padding:6px 12px;font-size:13px;font-weight:700}
+h1{font:700 clamp(34px,5.6vw,62px)/1.06 var(--display);text-align:center;margin:20px auto 12px;max-width:900px;text-wrap:balance;letter-spacing:-.01em}
+.sub{text-align:center;color:var(--muted);margin:0 0 22px}
+.sub b{color:var(--ink)}
+.picker{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;font-weight:700;font-size:18px}
+.sel{border:1px solid var(--line2);background:var(--card);border-radius:999px;padding:11px 20px;min-width:220px;display:flex;justify-content:space-between;gap:10px;font-weight:700}
+/* body grid */
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;margin-top:34px;align-items:start}
+.col{display:flex;flex-direction:column;gap:16px;min-width:0}
+.filters{background:var(--soft-card);border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;display:flex;flex-direction:column;gap:12px}
+.frow{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;align-items:center}
+.frow>span{font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line2);background:var(--card);border-radius:999px;padding:6px 14px;font-size:15px;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.chip small{color:var(--soft);font-size:13px}
+.chip.on{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.chip.on small{color:inherit;opacity:.7}
+.note{font-size:13px;color:var(--soft)}
+.showing{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:15px}
+.showing b{color:var(--ink)}
+.jobcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.jt{display:flex;gap:14px;align-items:flex-start}
+.jl{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;font:900 18px var(--body);flex:none}
+.jt h3{margin:0;font:700 20px/1.25 var(--body);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tag{font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px}
+.t-new{background:var(--yl);color:var(--yl-ink)}
+.t-fresh{background:var(--ok-bg);color:var(--ok)}
+.co{font-weight:700;color:var(--muted);font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;color:var(--muted);margin-left:66px}
+.mode{background:var(--bg);border-radius:6px;padding:1px 8px;font-weight:700;font-size:13.5px}
+.desc{margin:0 0 0 66px;color:var(--muted);font-size:15px}
+.sk{display:flex;flex-wrap:wrap;gap:6px;margin-left:66px}
+.sk span{border:1px solid var(--line2);border-radius:6px;padding:3px 10px;font-size:13.5px}
+.jf{display:flex;justify-content:flex-end;align-items:center;gap:14px;flex-wrap:wrap}
+.ago{font-size:14px;color:var(--soft)}
+.qa{background:var(--ink);color:var(--on-ink)}
+.qa i{color:var(--yellow);font-style:normal}
+/* drive-specific */
+.elig{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-left:66px}
+.el{border:1px solid var(--line);border-radius:10px;padding:7px 10px;background:var(--soft-card);min-width:0}
+.el small{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);font-weight:700}
+.el b{font-size:14px}
+.el.ok b{color:var(--ok)}
+.dl{font-size:13.5px;font-weight:700;border-radius:8px;padding:4px 10px}
+.d-hot{background:var(--hot-bg);color:var(--hot)}.d-warn{background:var(--warn-bg);color:var(--warn)}.d-ok{background:var(--ok-bg);color:var(--ok)}
+.src{font-size:13px;color:var(--soft);margin-right:auto}
+/* sidebar */
+.side{display:flex;flex-direction:column;gap:18px;position:sticky;top:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.box h2{font:700 21px/1.25 var(--display);margin:0 0 10px;text-wrap:balance}
+.big{font:700 34px var(--display)}
+.big small{font:400 15px var(--body);color:var(--muted);margin-left:6px}
+.bar{height:10px;background:var(--bg);border-radius:6px;position:relative;margin:12px 0 4px}
+.bar i{position:absolute;top:0;bottom:0;background:var(--yellow);border-radius:6px}
+.bar b{position:absolute;top:-3px;width:3px;height:16px;background:var(--ink);border-radius:2px}
+.range{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+.box p{margin:8px 0 0;font-size:14px;color:var(--muted)}
+.cos{list-style:none;margin:0;padding:0}
+.cos li{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.cos li:first-child{border-top:0}
+.cos span{color:var(--muted);font-variant-numeric:tabular-nums}
+.wa{background:var(--ok-bg);border-color:transparent}
+.wa h2{color:var(--ok)}
+.wa ul{margin:8px 0 14px;padding-left:18px;font-size:14px;color:var(--muted)}
+/* bottom */
+.below{margin:40px 0 0;display:grid;gap:24px}
+.below h2{font:700 26px var(--display);margin:0 0 12px}
+.rel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.rel h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin:0 0 8px}
+.rel ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.rel a{text-decoration:none;border-bottom:1px solid var(--line2)}
+.rel a:hover{border-color:var(--ink)}
+.faq{display:flex;flex-direction:column;gap:8px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 0;color:var(--muted)}
+.pager{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.pager span{border:1px solid var(--line2);border-radius:8px;padding:4px 11px;font-size:14px;background:var(--card)}
+.pager span.cur{background:var(--ink);color:var(--on-ink)}
+.foot{margin:40px 0 30px;font-size:13px;color:var(--soft);text-align:center}
+@media (max-width:980px){.grid{grid-template-columns:minmax(0,1fr)}.side{position:static}.rel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .meta,.desc,.sk,.elig{margin-left:0}
+  .elig{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .frow{grid-template-columns:minmax(0,1fr)}
+  .rel{grid-template-columns:minmax(0,1fr)}
+  .sel{min-width:0;width:100%}
+}
+</style>
+
+<div class="mockbar">
+  <div class="wrap">
+    <span><b>MOCKUP</b> · /jobs collection template for fresher pages · sample data</span>
+    <span class="legend"><span class="new">NEW</span> = change vs the live template</span>
+    <div class="sw" role="group" aria-label="Page type">
+      <button id="b-fresh" aria-pressed="true" data-p="fresh">/jobs/fresher-jobs-in-bangalore</button>
+      <button id="b-drive" aria-pressed="false" data-p="drive">/jobs/off-campus-drive</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="nav">
+    <div class="logo"><i aria-hidden="true"></i>Weekday</div>
+    <ul><li>Our story</li><li>Pricing</li><li>Book demo</li><li>For Candidates ▾</li><li>For Companies ▾</li></ul>
+    <a class="btn btn-ink" href="https://jobs.weekday.works/" target="_blank" rel="noopener">For Candidates</a>
+  </header>
+
+  <nav class="crumbs" aria-label="Breadcrumb" id="crumbs"></nav>
+  <div class="badges"><span class="badge">🏅 #1 Product of the Day</span><span class="badge">Backed by Y Combinator</span></div>
+  <h1 id="h1"></h1>
+  <p class="sub" id="sub"></p>
+  <div class="picker" id="picker"></div>
+
+  <div class="grid">
+    <div class="col">
+      <div class="filters" id="filters"></div>
+      <div class="showing"><span id="showing"></span><span>Sort <span class="sel" style="display:inline-flex;min-width:0;padding:6px 14px;font-weight:400" id="sort"></span></span></div>
+      <div class="col" id="cards"></div>
+      <div class="pager" aria-label="Pagination"><span class="cur">1</span><span>2</span><span>3</span><span>…</span><span id="lastpg">17</span><span>Next →</span></div>
+    </div>
+    <aside class="side" id="side"></aside>
+  </div>
+
+  <section class="below">
+    <div class="newbox" id="relbox"><span class="new">NEW · fresher links</span>
+      <h2>Related searches</h2>
+      <div class="rel" id="rel"></div>
+    </div>
+    <div class="newbox"><span class="new">NEW · fresher FAQs</span>
+      <h2 id="faqh"></h2>
+      <div class="faq" id="faq"></div>
+    </div>
+  </section>
+  <p class="foot">Mockup for Weekday's engineering team. Same template as /jobs/remote-backend-developer-jobs. Jobs, companies and numbers are sample data.</p>
+</div>
+
+<script>
+const LOGO=[["#FFF1D6","#8A5A00"],["#E3F4EA","#1B6B3A"],["#E6F0FB","#1D5A9E"],["#F3E8FB","#6B2E8F"],["#FDE7E4","#9E2F1D"],["#EDEBE4","#3D3A33"]];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const P={
+ fresh:{
+  crumbs:["Home","Jobs","Bangalore","Fresher Jobs"],
+  h1:"340 Fresher Jobs in Bangalore",
+  sub:"Updated 12 Oct 2026 · <b>41 new this week</b> · every role here accepts 0–1 years of experience",
+  picker:`<span>Show me</span><span class="sel">All roles <span>▾</span></span><span>fresher jobs in</span><span class="sel">Bangalore <span>▾</span></span><button class="btn btn-ink">Search</button>`,
+  showing:"<b>Showing 1–20</b> of 340 fresher jobs · quick-apply roles first",
+  last:17,
+  side:"fresh",
+  cards:[
+   {t:"Software Engineer – Graduate",c:"Paperplane",city:"Bangalore",mode:"Hybrid",exp:"0–1 yrs",pay:"₹6–9 LPA",d:"Join a 35-person team shipping a travel booking app. Structured mentorship in your first year, real features from week two.",sk:["JavaScript","React","DSA"],ago:"1 day ago",isNew:1,qa:1},
+   {t:"Data Analyst (Fresher)",c:"Orbitkart",city:"Bangalore",mode:"On-site",exp:"0–1 yrs",pay:"₹5–7 LPA",d:"Build weekly dashboards for the growth team of a quick-commerce app. SQL test, then one case round.",sk:["SQL","Excel","Power BI"],ago:"2 days ago",isNew:0,qa:1},
+   {t:"Business Development Associate",c:"Ledgerly",city:"Bangalore",mode:"On-site",exp:"0 yrs",pay:"₹4.5–6 LPA + incentives",d:"Own outbound calls to small businesses for a lending product. Any graduate can apply; training for 4 weeks.",sk:["Communication","CRM","Cold calling"],ago:"3 days ago",isNew:0,qa:0}
+  ],
+  rel:[["Fresher jobs in other cities",["Fresher jobs in Hyderabad","Fresher jobs in Pune","Fresher jobs in Chennai","Fresher jobs in Delhi NCR"]],["Fresher jobs by role",["Data analyst fresher jobs","IT jobs for freshers","MBA fresher jobs","Startup jobs for freshers"]],["More for freshers",["Work from home jobs for freshers","Internships in Bangalore","Off campus drive 2026","All jobs in Bangalore"]]],
+  faqh:"Fresher jobs in Bangalore: FAQs",
+  faq:[["How many fresher jobs are open in Bangalore right now?","340 roles that accept 0–1 years of experience, updated daily. 41 were posted this week."],["What salary do freshers get in Bangalore?","The median on these listings is ₹6 LPA. Half pay between ₹4.5 and ₹9 LPA, based on listings with a disclosed salary."],["Which companies hire freshers in Bangalore?","This week the most fresher roles came from Orbitkart, Paperplane and Ledgerly. The sidebar updates daily."],["Is Weekday free for freshers?","Yes. Sign up, upload your resume once, and Quick apply to any role in one click."]]
+ },
+ drive:{
+  crumbs:["Home","Jobs","Freshers","Off Campus Drive"],
+  h1:"Off Campus Drive 2026: 2025 & 2026 Batch",
+  sub:"Updated 12 Oct 2026 · <b>18 drives open</b> · sorted by last date to apply",
+  picker:`<span>Show drives for</span><span class="sel">2026 batch <span>▾</span></span><span>with degree</span><span class="sel">B.Tech / BE <span>▾</span></span><button class="btn btn-ink">Search</button>`,
+  showing:"<b>Showing 1–18</b> of 18 open drives · closing soonest first",
+  last:1,
+  side:"drive",
+  cards:[
+   {t:"Graduate Engineer Trainee",c:"Orbitkart",city:"Bangalore",mode:"On-site",exp:"0 yrs",pay:"₹8 LPA",batch:"2026",deg:"B.Tech CS/IT/ECE",cg:"6.5+",rounds:"Test → 2 tech → HR",by:"14 Oct",left:2,src:"Company careers page",qa:0},
+   {t:"Analyst Hiring Drive",c:"Nimbus Fintech",city:"Mumbai",mode:"Hybrid",exp:"0 yrs",pay:"₹7–9 LPA",batch:"2025, 2026",deg:"B.Com / BBA / B.Tech",cg:"None",rounds:"Aptitude → GD → Interview",by:"18 Oct",left:6,src:"Company LinkedIn post",qa:0},
+   {t:"SDE Trainee – Women in Tech",c:"Kitepath",city:"Remote",mode:"Remote",exp:"0 yrs",pay:"₹6.5 LPA",batch:"2025, 2026",deg:"B.Tech / BCA / MCA",cg:"None",rounds:"Take-home → Tech round",by:"28 Oct",left:16,src:"Posted on Weekday",qa:1}
+  ],
+  rel:[["Drives by batch",["2026 batch hiring","2025 batch hiring","Final-year internships"]],["Fresher jobs by city",["Fresher jobs in Bangalore","Fresher jobs in Hyderabad","Fresher jobs in Pune"]],["More for freshers",["Work from home jobs for freshers","IT jobs for freshers","Fresher jobs in India"]]],
+  faqh:"Off campus drives 2026: FAQs",
+  faq:[["Which companies are running off campus drives for the 2026 batch?","18 drives are open now. Each card shows the batch, degree, CGPA cutoff and last date."],["How do I get alerts for new off campus drives?","Join Weekday's WhatsApp alerts and pick your batch. We message you the day a new drive opens."],["Is there a CGPA cutoff?","It depends on the company. Each card shows the cutoff, or 'None' when there isn't one."],["Where do these drives come from?","Company careers pages, hiring posts on LinkedIn, and roles posted directly on Weekday. The source is on each card."]]
+ }
+};
+function jobCard(j,i,type){
+  const [bg,fg]=LOGO[(i+2)%LOGO.length];
+  const head=`<div class="jt"><div class="jl" style="background:${bg};color:${fg}" aria-hidden="true">${esc(j.c[0])}</div><div><h3>${esc(j.t)}${j.isNew?'<span class="tag t-new">New</span>':''}<span class="tag t-fresh">Fresher friendly</span></h3><div class="co">${esc(j.c)}</div></div></div>
+   <div class="meta"><span>📍 ${esc(j.city)}</span><span class="mode">${esc(j.mode)}</span><span>💼 ${esc(j.exp)}</span><span>₹ ${esc(j.pay.replace("₹",""))}</span></div>`;
+  if(type==="drive"){
+    const dc=j.left<=3?"d-hot":j.left<=7?"d-warn":"d-ok";
+    return `<article class="jobcard newbox"><span class="new">NEW · drive card</span>${head}
+     <div class="elig"><div class="el ok"><small>Batch</small><b>${esc(j.batch)}</b></div><div class="el"><small>Degree</small><b>${esc(j.deg)}</b></div><div class="el ${j.cg==="None"?"ok":""}"><small>CGPA</small><b>${esc(j.cg)}</b></div><div class="el"><small>Rounds</small><b>${esc(j.rounds)}</b></div></div>
+     <div class="jf"><span class="src">Source: ${esc(j.src)}</span><span class="dl ${dc}">Apply by ${esc(j.by)} · ${j.left} days left</span>${j.qa?'<button class="btn qa"><i>⚡</i>Quick apply</button>':'<button class="btn btn-ink">Apply on company site ↗</button>'}</div></article>`;
+  }
+  return `<article class="jobcard ${i===0?"newbox":""}">${i===0?'<span class="new">NEW · fresher badge</span>':''}${head}
+   <p class="desc">${esc(j.d)}</p><div class="sk">${j.sk.map(s=>`<span>${esc(s)}</span>`).join("")}</div>
+   <div class="jf"><span class="ago">🕑 ${esc(j.ago)}</span>${j.qa?'<button class="btn qa"><i>⚡</i>Quick apply</button>':'<button class="btn btn-ink">View job</button>'}</div></article>`;
+}
+function filters(type){
+  if(type==="drive")return `<div class="frow"><span>Batch</span><div class="chips"><span class="chip on">2026 <small>12</small></span><span class="chip">2025 <small>9</small></span><span class="chip">Final-year intern <small>5</small></span></div></div>
+   <div class="frow"><span>Closing</span><div class="chips"><span class="chip">This week <small>4</small></span><span class="chip">This month <small>14</small></span><span class="chip">No CGPA cutoff <small>11</small></span></div></div>`;
+  return `<div class="frow"><span>Work mode</span><div class="chips"><span class="chip">On-site <small>182</small></span><span class="chip">Hybrid <small>97</small></span><span class="chip">Remote <small>61</small></span></div></div>
+   <div class="frow"><span>Experience</span><div class="chips"><span class="chip on">0–1 yrs <small>340</small></span></div></div>
+   <div class="frow"><span>Role type</span><div class="chips"><span class="chip">Tech <small>196</small></span><span class="chip">Sales &amp; BD <small>64</small></span><span class="chip">Operations <small>38</small></span><span class="chip">Internships <small>42</small></span></div></div>
+   <p class="note" style="margin:0">Experience is locked to 0–1 yrs on this page. On other pages the "0–1 yrs" chip links here.</p>`;
+}
+function side(type){
+  const wa=`<div class="box wa newbox"><span class="new">NEW · alert hook</span><h2>${type==="drive"?"Get new drives on WhatsApp":"New fresher jobs on WhatsApp"}</h2><ul><li>${type==="drive"?"Alert the day a drive opens for your batch":"Fresh 0–1 yr roles every morning"}</li><li>Reminder 2 days before the last date</li><li>Apply from the chat in one tap</li></ul><button class="btn btn-wa" style="width:100%">Join WhatsApp alerts</button></div>`;
+  if(type==="drive")return wa+`<div class="box newbox"><span class="new">NEW · closing soon</span><h2>Closing this week</h2><ul class="cos"><li>Orbitkart · GET 2026<span>14 Oct</span></li><li>Nimbus Fintech · Analyst<span>18 Oct</span></li><li>Tealbox · Frontend intern<span>22 Oct</span></li></ul></div>`;
+  return `<div class="box"><h2>Fresher pay in Bangalore</h2><div class="big">₹6 LPA<small>median</small></div><div class="bar"><i style="left:12%;right:48%"></i><b style="left:28%"></b></div><div class="range"><span>₹3L</span><span>₹16L</span></div><p>Half of these jobs pay ₹4.5–9 LPA. From 212 listings with a disclosed salary.</p></div>
+  <div class="box"><h2>Top companies hiring freshers</h2><ul class="cos"><li>Orbitkart<span>18 jobs</span></li><li>Paperplane<span>12 jobs</span></li><li>Ledgerly<span>9 jobs</span></li><li>Tealbox<span>7 jobs</span></li></ul></div>`+wa;
+}
+function render(p){
+  const d=P[p];
+  document.getElementById("crumbs").innerHTML=d.crumbs.map(esc).join(' <span aria-hidden="true">›</span> ').replace(/([^>]+)$/,"<span>$1</span>");
+  document.getElementById("h1").textContent=d.h1;
+  document.getElementById("sub").innerHTML=d.sub;
+  document.getElementById("picker").innerHTML=d.picker;
+  document.getElementById("filters").innerHTML=filters(p);
+  document.getElementById("filters").classList.toggle("newbox",p==="drive");
+  document.getElementById("filters").querySelector(".new")?.remove();
+  if(p==="drive")document.getElementById("filters").insertAdjacentHTML("afterbegin",'<span class="new">NEW · batch filters</span>');
+  document.getElementById("showing").innerHTML=d.showing;
+  document.getElementById("sort").textContent=p==="drive"?"Closing soonest ▾":"Most relevant ▾";
+  document.getElementById("cards").innerHTML=d.cards.map((j,i)=>jobCard(j,i,p)).join("");
+  document.getElementById("lastpg").textContent=d.last;
+  document.querySelector(".pager").hidden=d.last<=1;
+  document.getElementById("side").innerHTML=side(p);
+  document.getElementById("rel").innerHTML=d.rel.map(([h,ls])=>`<div><h3>${esc(h)}</h3><ul>${ls.map(l=>`<li><a href="#">${esc(l)}</a></li>`).join("")}</ul></div>`).join("");
+  document.getElementById("faqh").textContent=d.faqh;
+  document.getElementById("faq").innerHTML=d.faq.map(([q,a],i)=>`<details ${i===0?"open":""}><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("");
+  document.querySelectorAll(".mockbar button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.p===p));
+}
+document.querySelectorAll(".mockbar button").forEach(b=>b.onclick=()=>{render(b.dataset.p);window.scrollTo(0,0)});
+render(location.hash==="#drive"?"drive":"fresh");
+</script>
+
+</body></html>
