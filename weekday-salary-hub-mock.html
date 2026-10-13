@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Company Salaries in India 2026: 300+ Companies, Real Data | Weekday</title>
+<meta name="description" content="See real fixed salaries at 300+ companies in India for 2026: TCS, Infosys, Deloitte, Google, Razorpay and more. Median pay by role and experience.">
+<link rel="canonical" href="https://www.weekday.works/salary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Vollkorn:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF8F2;--cream:#FFFDF7;--card:#fff;--ink:#141414;--muted:#4D596A;--soft:#6B7480;--line:rgba(20,20,20,.1);--line2:rgba(20,20,20,.18);--yellow:#FFC600;--yl:#FFF4CC;--r:14px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Lato,system-ui,sans-serif}
+a{color:inherit}
+svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+svg.fill{fill:currentColor;stroke:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 16px}
+h1,h2{font-family:Vollkorn,Georgia,serif;font-weight:600;letter-spacing:-.01em}
+
+.mockbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--ink);color:#EDEBE4;font-size:13px;padding:8px 16px}
+.mockbar b{color:var(--yellow)}
+.mock-btn{font:inherit;font-size:12px;color:var(--ink);background:var(--yellow);border:0;border-radius:999px;padding:5px 12px;cursor:pointer}
+
+.nav{position:sticky;top:0;z-index:20;background:rgba(250,248,242,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:24px;height:60px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;font:700 20px Vollkorn,Georgia,serif}
+.brand svg{width:22px;height:22px;stroke:none}
+.nav-links{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.btn-dark{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:12px 26px;font:700 15px Lato,sans-serif;text-decoration:none;cursor:pointer}
+.btn-dark:hover{background:#2c2c2c}
+.btn-dark.sm{padding:8px 16px;font-size:14px}
+.btn-dark.full{width:100%}
+
+.hero{position:relative;overflow:hidden;padding:28px 0 36px;text-align:center}
+.hero .wrap{position:relative}
+.spark{position:absolute;width:auto;height:auto;stroke:none}
+.s1{left:6%;top:120px}.s2{left:4%;top:104px}.s3{right:8%;top:230px}
+.crumbs{position:relative;display:inline-block;margin-bottom:18px}
+.crumbs ol{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;list-style:none;margin:0;padding:0;font-size:13px;color:var(--soft)}
+.crumbs li+li:before{content:"\203A";margin-right:6px;color:var(--line2)}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.crumbs [aria-current]{color:var(--ink)}
+.badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.badge{background:var(--ink);color:#EDEBE4;font-size:12px;border-radius:8px;padding:6px 12px}
+.badge b{color:#fff}
+.hero h1{position:relative;font-size:clamp(32px,5vw,52px);line-height:1.08;margin:0 auto 12px;max-width:820px}
+.lede{color:var(--muted);margin:0 0 26px;font-size:15px}
+.lede b{color:var(--ink)}
+.finder{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 12px;font-weight:700;font-size:17px}
+.sel select{appearance:none;font:700 16px Lato,sans-serif;color:var(--ink);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23141414' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center/16px;border:1px solid var(--line2);border-radius:999px;padding:11px 42px 11px 20px;min-width:210px;cursor:pointer}
+
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.results{position:relative;min-width:0}
+.filters{position:relative;display:flex;flex-direction:column;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:16px}
+.chip-group{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.fg-label{font-size:12px;color:var(--soft);width:84px;text-transform:none}
+.chip{font:14px Lato,sans-serif;color:var(--ink);background:#fff;border:1px solid var(--line2);border-radius:999px;padding:6px 13px;cursor:pointer}
+.chip i{font-style:normal;color:var(--soft);font-size:12px;margin-left:2px}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip[aria-pressed="true"] i{color:#cfcfcf}
+.res-head{display:flex;justify-content:space-between;align-items:center;margin:4px 2px 10px;font-size:14px;color:var(--muted)}
+.res-head p{margin:0}.res-head b{color:var(--ink)}
+.sort select{font:14px Lato,sans-serif;border:1px solid var(--line2);border-radius:8px;background:#fff;padding:5px 8px;margin-left:6px}
+
+.jobs{display:flex;flex-direction:column;gap:12px}
+.job{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;transition:border-color .15s,box-shadow .15s}
+.job:hover{border-color:var(--line2);box-shadow:0 4px 18px rgba(20,20,20,.06)}
+.job-top{display:flex;gap:14px;align-items:flex-start}
+.logo{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font:900 15px Lato,sans-serif;flex:none}
+.job-head{flex:1;min-width:0}
+.job-title{position:relative;margin:0;font:700 18px/1.3 Lato,sans-serif}
+.job-title a{text-decoration:none}
+.job-title a:hover{text-decoration:underline}
+.new{display:inline-block;vertical-align:2px;margin-left:8px;background:var(--yl);color:#7A5600;font-size:11px;font-weight:700;border-radius:6px;padding:2px 7px}
+.job-co{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin:3px 0 0;font-size:14px;color:var(--muted)}
+.job-co a{font-weight:700;color:var(--ink);text-decoration:none}
+.job-co a:hover{text-decoration:underline}
+.job-co svg,.meta svg,.posted svg{width:14px;height:14px;margin-right:4px;vertical-align:-2px}
+.nowrap{white-space:nowrap}
+.dot{width:3px;height:3px;border-radius:50%;background:var(--soft)}
+.icon-btn{background:none;border:1px solid transparent;border-radius:8px;padding:6px;color:var(--soft);cursor:pointer}
+.icon-btn:hover{border-color:var(--line2);color:var(--ink)}
+.icon-btn svg{width:18px;height:18px}
+.icon-btn.on{color:var(--ink)}.icon-btn.on svg{fill:var(--yellow);stroke:var(--ink)}
+.job-meta{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:14px 0 8px 60px;font-size:14px}
+.meta{display:inline-flex;align-items:center;color:var(--ink)}
+.meta.dim{color:var(--soft)}
+.mode{font-size:12px;font-weight:700;border-radius:6px;padding:3px 8px}
+.m-onsite{background:#F1EFE8;color:#4A4842}
+.m-hybrid{background:#E6F0FB;color:#1D5A9E}
+.m-remote{background:#E3F4EA;color:#1B6B3A}
+.snippet{margin:0 0 12px 60px;font-size:14.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.job-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-left:60px;flex-wrap:wrap}
+.skills{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.skills li{font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:3px 9px;color:#333}
+.job-actions{display:flex;align-items:center;gap:14px;margin-left:auto}
+.posted{font-size:13px;color:var(--soft);white-space:nowrap}
+.btn-apply{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:14px;border-radius:999px;padding:9px 18px}
+.btn-apply svg{width:14px;height:14px;color:var(--yellow)}
+.btn-apply:hover{background:#2c2c2c}
+.empty{background:#fff;border:1px dashed var(--line2);border-radius:var(--r);padding:24px;text-align:center;color:var(--muted)}
+
+.pager{position:relative;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;margin:26px 0 8px}
+.pg{min-width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;gap:4px;border:1px solid var(--line2);border-radius:10px;background:#fff;text-decoration:none;font-size:14px;padding:0 12px}
+.pg:hover{border-color:var(--ink)}
+.pg.cur{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:700}
+.pg.gap{border:0;background:none;min-width:auto}
+.pg.nav-dis{color:#aaa;background:transparent}
+.pg svg{width:14px;height:14px}
+
+.side{position:sticky;top:76px;display:flex;flex-direction:column;gap:14px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.panel h2{font-size:18px;margin:0 0 10px}
+.panel p{font-size:14px;color:var(--muted);margin:0 0 14px}
+.big{font:600 30px Vollkorn,Georgia,serif;color:var(--ink)!important;margin:0 0 10px!important}
+.big span{font:400 13px Lato,sans-serif;color:var(--soft)}
+.range{position:relative;height:8px;background:#EFECE3;border-radius:999px}
+.band{position:absolute;top:0;bottom:0;background:var(--yellow);border-radius:999px}
+.mid{position:absolute;top:-4px;width:3px;height:16px;background:var(--ink);border-radius:2px}
+.range-l{display:flex;justify-content:space-between;font-size:12px;color:var(--soft);margin:6px 0 10px}
+.fine{font-size:12px!important;margin:0!important}
+.top-co{list-style:none;margin:0;padding:0;font-size:14px}
+.top-co li{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid var(--line)}
+.top-co li:first-child{border-top:0}
+.top-co b{font-weight:400;color:var(--soft)}
+.panel.ai{background:var(--yl);border-color:#F2DE95}
+.panel.ai p{color:#5B4A12}
+
+.block{margin-top:56px;position:relative}
+.block>h2{font-size:30px;margin:0 0 18px}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.rel-col{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.rel-col h3{font-size:14px;color:var(--soft);font-weight:700;margin:0 0 10px}
+.rel-col ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.rel-col a{display:inline-block;font-size:14px;text-decoration:none;border:1px solid var(--line2);border-radius:999px;padding:6px 12px;background:var(--cream)}
+.rel-col a:hover{border-color:var(--ink)}
+
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;padding:16px 20px;font-weight:700;font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq .chev svg{width:18px;height:18px;transition:transform .2s}
+.faq details[open] .chev svg{transform:rotate(180deg)}
+.faq details p{margin:0;padding:0 20px 18px;color:var(--muted);font-size:15px}
+
+.devnotes{background:#fff;border:2px dashed #E9C64A;border-radius:18px;padding:24px}
+.devnotes>h2{margin-bottom:4px}
+.dn-lede{margin:0 0 18px;color:var(--muted);font-size:14px}
+.notes{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px 24px}
+.notes li{display:flex;gap:12px}
+.n-t{margin:0;font-weight:700;font-size:15px}
+.n-tag{white-space:nowrap;font-size:11px;font-weight:700;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:var(--muted);margin-left:4px}
+.n-d{margin:2px 0 0;font-size:14px;color:var(--muted)}
+.code-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.devnotes h3{font-size:14px;margin:0 0 6px}
+pre{margin:0 0 16px;background:#1A1A1A;color:#E9E6DC;border-radius:10px;padding:14px;font:12.5px/1.5 ui-monospace,Menlo,Consolas,monospace;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+
+.foot{margin-top:64px;border-top:1px solid var(--line);background:var(--cream)}
+.foot-in{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px;padding-top:36px;padding-bottom:40px;font-size:14px}
+.foot h3{font-size:13px;color:var(--soft);margin:0 0 10px}
+.foot-in>div>a:not(.brand){display:block;text-decoration:none;color:var(--muted);padding:3px 0}
+.foot-in>div>a:hover{color:var(--ink)}
+.foot p{color:var(--muted);margin:6px 0 0}
+
+.fx{display:none;position:absolute;z-index:5;top:-10px;left:-10px;width:24px;height:24px;border-radius:50%;background:var(--yellow);color:var(--ink);font:900 12px/24px Lato,sans-serif;text-align:center;box-shadow:0 0 0 3px var(--bg)}
+.annot .fx{display:inline-block}
+.fx.static,.fx.inl{display:inline-block;position:static;box-shadow:none;flex:none}
+.fx.inl{width:20px;height:20px;line-height:20px;font-size:11px;vertical-align:1px;margin-left:4px}
+.job-title .fx{top:-26px;left:auto;right:-30px}
+.hero h1 .fx{left:auto;right:-6px;top:-4px}
+.crumbs .fx{left:-30px;top:-2px}
+.pager .fx{left:auto;right:0;top:-8px}
+.annot .job:first-child{outline:2px dashed #E9C64A;outline-offset:3px}
+body:not(.annot) .devnotes{display:none}
+
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr}
+  .side{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+}
+@media (max-width:640px){
+  .nav-links{display:none}.nav-in .btn-dark{margin-left:auto}
+  .s1,.s2,.s3{display:none}
+  .finder{flex-direction:column}.sel{width:100%}.sel select{width:100%;min-width:0}.finder .btn-dark{width:100%}
+  .fg-label{width:100%}
+  .job{padding:16px}
+  .job-meta,.snippet,.job-foot{margin-left:0}
+  .job-actions{width:100%;justify-content:space-between}
+  .res-head{flex-direction:column;align-items:flex-start;gap:6px}
+  .pg{min-width:36px;height:36px;padding:0 9px}
+  .crumbs .fx{left:-4px;top:-22px}
+  .hero h1 .fx{right:auto;left:-4px;top:-26px}
+}
+
+.st-wrap{overflow-x:auto;margin:0 0 20px}
+.st{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.st th{text-align:left;font-size:12px;color:var(--soft);font-weight:700;padding:8px 10px;border-bottom:1px solid var(--line2)}
+.st td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.st code,.devnotes h3 code{font:12.5px ui-monospace,Menlo,monospace;background:var(--bg);padding:1px 5px;border-radius:4px}
+.ok,.part{display:inline-block;font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.ok{background:#E3F4EA;color:#1B6B3A}.part{background:var(--yl);color:#7A5600}
+
+/* salary pages */
+.hero .trust{display:inline-flex;flex-wrap:nowrap;text-align:left;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin:0 0 22px}
+.hero .trust b{color:var(--ink)}
+.hero .trust .tick{width:18px;height:18px;border-radius:50%;background:#E3F4EA;color:#1B6B3A;display:inline-grid;place-items:center;font-size:11px;font-weight:900}
+.stats{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:980px;margin:0 auto 18px;text-align:left}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.stat.hl{background:var(--ink);color:#fff;border-color:var(--ink)}
+.stat .k{font-size:12.5px;color:var(--soft);margin:0 0 4px}
+.stat.hl .k{color:#BDBAB2}
+.stat .v{font:600 28px/1.1 Vollkorn,Georgia,serif;margin:0}
+.stat.hl .v{color:var(--yellow)}
+.stat .s{font-size:12.5px;color:var(--soft);margin:4px 0 0}
+.stat.hl .s{color:#BDBAB2}
+.jump{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:6px 0 0}
+.jump a{font-size:13.5px;text-decoration:none;border:1px solid var(--line2);border-radius:999px;padding:6px 13px;background:#fff}
+.jump a:hover{border-color:var(--ink)}
+.sec{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 22px 18px;margin-bottom:16px}
+.sec>h2{font-size:24px;margin:0 0 6px}
+.sec>.sub{margin:0 0 16px;color:var(--muted);font-size:14.5px}
+.sec p{font-size:15px}
+.intro{font-size:15.5px;color:#2A2A2A;margin:0}
+.intro b{color:var(--ink)}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:grid;grid-template-columns:110px minmax(0,1fr) 120px;gap:14px;align-items:center;font-size:14px}
+.bar-row .lab b{display:block;font-size:14.5px}
+.bar-row .lab span{font-size:12px;color:var(--soft)}
+.track{position:relative;height:10px;background:#EFECE3;border-radius:999px}
+.track .band{position:absolute;top:0;bottom:0;background:var(--yellow);border-radius:999px}
+.track .mid{position:absolute;top:-4px;width:3px;height:18px;background:var(--ink);border-radius:2px}
+.bar-row .val{text-align:right}
+.bar-row .val b{font:600 18px Vollkorn,Georgia,serif}
+.bar-row .val span{display:block;font-size:12px;color:var(--soft)}
+.axis{display:grid;grid-template-columns:110px minmax(0,1fr) 120px;gap:14px;font-size:11.5px;color:var(--soft);margin-top:6px}
+.axis div{display:flex;justify-content:space-between}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+.tbl th{text-align:left;font-size:12px;color:var(--soft);font-weight:700;padding:8px 10px;border-bottom:1px solid var(--line2);white-space:nowrap}
+.tbl td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td.num{font-weight:700;white-space:nowrap}
+.tbl td.rng{color:var(--muted);white-space:nowrap}
+.tbl td.cnt{color:var(--soft);font-size:13px;white-space:nowrap}
+.tbl a{font-weight:700;text-decoration:none}
+.tbl a:hover{text-decoration:underline}
+.tbl .arrow{color:var(--soft);font-size:13px;font-weight:400;margin-left:4px}
+.mini{display:inline-block;width:90px;height:6px;background:#EFECE3;border-radius:999px;position:relative;vertical-align:middle;margin-left:8px}
+.mini i{position:absolute;top:0;bottom:0;background:var(--yellow);border-radius:999px}
+.hidden-note{margin:12px 0 0;font-size:13px;color:var(--soft)}
+.fresh{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;align-items:start}
+.fresh-big{background:var(--yl);border:1px solid #F2DE95;border-radius:12px;padding:16px}
+.fresh-big .v{font:600 34px/1 Vollkorn,Georgia,serif;margin:0}
+.fresh-big .k{font-size:13px;color:#5B4A12;margin:6px 0 0}
+.fresh ul{margin:0;padding-left:18px;font-size:15px;color:#2A2A2A}
+.fresh li{margin:0 0 6px}
+.samples .tbl td{font-size:14px}
+.more-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font:700 14px Lato,sans-serif;background:#fff;border:1px solid var(--line2);border-radius:999px;padding:8px 16px;cursor:pointer}
+.more-btn:hover{border-color:var(--ink)}
+.tag-b{display:inline-block;font-size:11px;font-weight:700;border-radius:6px;padding:2px 7px;background:#F1EFE8;color:#4A4842;margin-left:6px}
+.calc .row{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-top:1px solid var(--line)}
+.calc .row:first-of-type{border-top:0}
+.calc .row b{font-weight:700}
+.peer{list-style:none;margin:0;padding:0;font-size:14px}
+.peer li{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.peer li:first-child{border-top:0}
+.peer a{text-decoration:none;font-weight:700}
+.peer a:hover{text-decoration:underline}
+.peer span{color:var(--muted)}
+.guides{list-style:none;margin:0;padding:0;font-size:14px}
+.guides li{padding:7px 0;border-top:1px solid var(--line)}
+.guides li:first-child{border-top:0}
+.guides a{text-decoration:none}
+.guides a:hover{text-decoration:underline}
+.side .panel{position:relative}
+.jobstrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.jcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.jcard h3{margin:0;font-size:16px}
+.jcard p{margin:4px 0 10px;font-size:13.5px;color:var(--muted)}
+.jcard .btn-apply{padding:7px 14px;font-size:13px}
+.vs a{background:#fff}
+.livebox{background:#fff;border:1px dashed var(--line2);border-radius:var(--r);padding:16px 18px;margin:0 0 18px;font-size:14px;color:var(--muted)}
+.livebox b{color:var(--ink)}
+.livebox code{font:12.5px ui-monospace,Menlo,monospace;background:var(--bg);padding:1px 5px;border-radius:4px}
+.sec .fx{left:-10px;top:-10px}
+.stats .fx{left:-10px;top:-10px}
+.jump .fx{left:-30px;top:2px}
+.hero .trust .fx{position:static;margin-left:6px;box-shadow:none}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .bar-row,.axis{grid-template-columns:84px minmax(0,1fr) 92px;gap:10px}
+  .fresh{grid-template-columns:1fr}
+  .stat .v{font-size:24px}
+  .jump .fx{left:-4px;top:-22px}
+}
+/* hub */
+.search-box{position:relative;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:820px;margin:0 auto}
+.search-box input{flex:1 1 320px;font:16px Lato,sans-serif;border:1px solid var(--line2);border-radius:999px;padding:13px 20px;background:#fff}
+.popular{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px auto 0;max-width:860px;font-size:13.5px;color:var(--soft)}
+.popular a{font-size:13.5px;text-decoration:none;border:1px solid var(--line2);border-radius:999px;padding:5px 12px;background:#fff;color:var(--ink)}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.cat{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.cat h3{margin:0 0 4px;font:600 20px Vollkorn,Georgia,serif}
+.cat .cnote{margin:0 0 10px;font-size:13px;color:var(--soft)}
+.cat ul{list-style:none;margin:0;padding:0;font-size:14.5px}
+.cat li{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-top:1px solid var(--line)}
+.cat li:first-child{border-top:0}
+.cat a{text-decoration:none;font-weight:700}
+.cat a:hover{text-decoration:underline}
+.cat li span{color:var(--muted);font-size:13.5px}
+.cat .all{display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;text-decoration:none}
+.az{position:relative;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.az a{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line2);border-radius:8px;background:#fff;text-decoration:none;font-weight:700;font-size:14px}
+.az a.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.az-list{columns:4 200px;column-gap:24px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;font-size:14.5px}
+.az-list a{display:block;padding:4px 0;text-decoration:none;break-inside:avoid}
+.az-list a:hover{text-decoration:underline}
+.az-list a span{color:var(--soft);font-size:13px;margin-left:6px}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.tool{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;text-decoration:none;display:block}
+.tool:hover{border-color:var(--ink)}
+.tool b{display:block;font:600 19px Vollkorn,Georgia,serif;margin-bottom:4px}
+.tool span{font-size:14px;color:var(--muted)}
+.prose p{max-width:820px}
+.prose p{color:#2A2A2A;font-size:15.5px}
+.block>.fx{left:-10px;top:-10px}
+
+.block.faq>.fx{left:-34px;top:6px}
+@media (max-width:640px){.block.faq>.fx{left:-4px;top:-18px}}
+</style>
+</head>
+<body class="annot">
+<div class="mockbar" role="note">
+  <span><b>Design mock</b> · /salary (hub) · company medians are real Weekday data at 2–3 yrs; hub totals are estimates, fill them server-side</span>
+  <button id="annToggle" class="mock-btn" aria-pressed="true">Hide fix markers</button>
+</div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Weekday home">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFC600" d="M2 4h4.2l2.3 10.5L11 4h2l2.5 10.5L17.8 4H22l-4.4 16h-3.9L12 12.6 10.3 20H6.4z"/><path fill="#141414" d="M2 4h4.2l2.3 10.5L11 4h1v8.6L10.3 20H6.4z" opacity=".9"/></svg>
+      <span>Weekday</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/jobs">Browse jobs</a><a href="/salary">Salaries</a><a href="/our-story">Our story</a><a href="/pricing">Pricing</a>
+    </nav>
+    <a class="btn-dark sm" href="/book-demo">Book demo</a>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="wrap">
+    <svg class="spark s1" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="#2BB5A0" d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg><svg class="spark s2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#E8679A" d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg><svg class="spark s3" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="#6A3DE8" d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg>
+    <nav class="crumbs" aria-label="Breadcrumb"><span class="fx" aria-hidden="true">2</span>
+      <ol><li><a href="/">Home</a></li><li aria-current="page">Salaries</li></ol>
+    </nav>
+    <div class="badges"><span class="badge">Backed by <b>Y Combinator</b></span><span class="badge">#1 Product of the Day</span></div>
+    <h1><span class="fx" aria-hidden="true">1</span>Company Salaries in India (2026)</h1>
+    <p class="lede">Real fixed salaries at <b>300 companies</b>, from about <b>1.9 lakh salaries</b> shared on Weekday · Updated Oct 2026</p>
+    <form class="search-box" onsubmit="return false"><span class="fx" aria-hidden="true">3</span>
+      <input type="search" placeholder="Search a company, e.g. TCS, Google, Razorpay" aria-label="Company">
+      <label class="sel"><span class="sr">Role</span><select><option>All roles</option><option>Software engineer</option><option>Data engineer</option><option>Product manager</option><option>DevOps engineer</option></select></label>
+      <button class="btn-dark">See salaries</button>
+    </form>
+    <div class="popular"><span class="fx" aria-hidden="true">4</span>Popular:
+      <a href="/salary/what-salary-does-tcs-pay">TCS salary</a><a href="/salary/what-salary-does-infosys-pay">Infosys salary</a><a href="/salary/what-salary-does-deloitte-pay">Deloitte salary</a><a href="/salary/what-salary-does-accenture-pay">Accenture salary</a><a href="/salary/what-salary-does-amazon-pay">Amazon salary</a><a href="/salary/what-salary-does-google-pay">Google salary</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap block" style="margin-top:8px"><span class="fx" aria-hidden="true">5</span>
+  <div class="tools">
+    <a class="tool" href="/in-hand-salary-calculator"><b>In-hand salary calculator</b><span>Turn any CTC into your monthly take-home for 2026.</span></a>
+    <a class="tool" href="/salary-hike-calculator"><b>Salary hike calculator</b><span>See what a % hike means in hand before you negotiate.</span></a>
+    <a class="tool" href="/post/ctc-meaning-in-hand-salary"><b>CTC vs in-hand, explained</b><span>What's inside your CTC and what gets cut each month.</span></a>
+  </div>
+</section>
+
+<section class="wrap block" id="categories"><span class="fx" aria-hidden="true">6</span>
+  <h2>Salaries by company type</h2>
+  <p class="dn-lede" style="margin-top:-8px">Median fixed salary at 2–3 years of experience, so companies compare like for like</p>
+  <div class="cat-grid">
+    <div class="cat" id="it-services"><h3>IT services</h3><p class="cnote">Mass recruiters and freshers' first jobs</p><ul>
+      <li><a href="/salary/what-salary-does-tcs-pay">TCS</a><span>₹8.8 L</span></li>
+      <li><a href="/salary/what-salary-does-infosys-pay">Infosys</a><span>₹9.7 L</span></li>
+      <li><a href="/salary/what-salary-does-wipro-pay">Wipro</a><span>₹9.4 L</span></li>
+      <li><a href="/salary/what-salary-does-cognizant-pay">Cognizant</a><span>₹9.4 L</span></li>
+      <li><a href="/salary/what-salary-does-accenture-pay">Accenture</a><span>₹9.9 L</span></li>
+      <li><a href="/salary/what-salary-does-capgemini-pay">Capgemini</a><span>₹9.9 L</span></li>
+    </ul><a class="all" href="#az">All IT services companies ›</a></div>
+    <div class="cat"><h3>Big tech (FAANG)</h3><p class="cnote">Highest-paying engineering employers in India</p><ul>
+      <li><a href="/salary/what-salary-does-google-pay">Google</a><span>₹39.6 L</span></li>
+      <li><a href="/salary/what-salary-does-apple-pay">Apple</a><span>₹33.0 L</span></li>
+      <li><a href="/salary/what-salary-does-microsoft-pay">Microsoft</a><span>₹31.9 L</span></li>
+      <li><a href="/salary/what-salary-does-amazon-pay">Amazon</a><span>₹25.3 L</span></li>
+      <li><a href="/salary/what-salary-does-facebook-pay">Meta</a><span>₹21.4 L</span></li>
+    </ul><a class="all" href="#az">All big tech ›</a></div>
+    <div class="cat"><h3>Indian startups</h3><p class="cnote">Product companies and unicorns</p><ul>
+      <li><a href="/salary/what-salary-does-meesho-pay">Meesho</a><span>₹33.0 L</span></li>
+      <li><a href="/salary/what-salary-does-flipkart-pay">Flipkart</a><span>₹29.7 L</span></li>
+      <li><a href="/salary/what-salary-does-razorpay-pay">Razorpay</a><span>₹27.5 L</span></li>
+      <li><a href="/salary/what-salary-does-cred-pay">CRED</a><span>₹27.5 L</span></li>
+      <li><a href="/salary/what-salary-does-swiggy-pay">Swiggy</a><span>₹27.5 L</span></li>
+      <li><a href="/salary/what-salary-does-zomato-pay">Zomato</a><span>₹24.2 L</span></li>
+    </ul><a class="all" href="#az">All startups ›</a></div>
+    <div class="cat"><h3>Global banks and GCCs</h3><p class="cnote">Tech centres of global banks in India</p><ul>
+      <li><a href="/salary/what-salary-does-goldman_sachs-pay">Goldman Sachs</a><span>₹31.9 L</span></li>
+      <li><a href="/salary/what-salary-does-morgan_stanley-pay">Morgan Stanley</a><span>₹25.3 L</span></li>
+      <li><a href="/salary/what-salary-does-jp_morgan-pay">JPMorgan</a><span>₹23.1 L</span></li>
+      <li><a href="/salary/what-salary-does-citi-pay">Citi</a><span>₹17.6 L</span></li>
+      <li><a href="/salary/what-salary-does-wells_fargo-pay">Wells Fargo</a><span>₹16.1 L</span></li>
+      <li><a href="/salary/what-salary-does-bank_of_america-pay">Bank of America</a><span>₹10.5 L</span></li>
+    </ul><a class="all" href="#az">All banks and GCCs ›</a></div>
+    <div class="cat"><h3>Consulting and Big 4</h3><p class="cnote">Strategy, audit and tech consulting</p><ul>
+      <li><a href="/salary/what-salary-does-mckinsey-pay">McKinsey</a><span>₹20.5 L</span></li>
+      <li><a href="/salary/what-salary-does-bcg-pay">BCG</a><span>₹16.8 L</span></li>
+      <li><a href="/salary/what-salary-does-ey-pay">EY</a><span>₹16.6 L</span></li>
+      <li><a href="/salary/what-salary-does-pwc-pay">PwC</a><span>₹12.1 L</span></li>
+      <li><a href="/salary/what-salary-does-deloitte-pay">Deloitte</a><span>₹9.7 L</span></li>
+      <li><a href="/salary/what-salary-does-kpmg-pay">KPMG</a><span>₹8.0 L</span></li>
+    </ul><a class="all" href="#az">All consulting firms ›</a></div>
+    <div class="cat"><h3>Indian banks</h3><p class="cnote">Private sector banks</p><ul>
+      <li><a href="/salary/what-salary-does-icici-pay">ICICI Bank</a><span>₹5.6 L</span></li>
+      <li><a href="/salary/what-salary-does-hdfc_bank-pay">HDFC Bank</a><span>₹5.0 L</span></li>
+      <li><a href="/salary/what-salary-does-axis_bank-pay">Axis Bank</a><span>₹5.0 L</span></li>
+    </ul><a class="all" href="#az">All Indian banks ›</a></div>
+  </div>
+</section>
+
+<section class="wrap block" id="az"><span class="fx" aria-hidden="true">7</span>
+  <h2>All companies, A to Z</h2>
+  <nav class="az" aria-label="Jump to letter">
+    <a href="#">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a href="#">E</a><a href="#">F</a><a href="#">G</a><a href="#">H</a><a href="#">I</a><a href="#">J</a><a href="#">K</a><a href="#">L</a><a href="#">M</a><a href="#">N</a><a href="#">O</a><a href="#">P</a><a href="#">Q</a><a href="#">R</a><a href="#">S</a><a class="on" href="#">T</a><a href="#">U</a><a href="#">V</a><a href="#">W</a><a href="#">X</a><a href="#">Y</a><a href="#">Z</a>
+  </nav>
+  <div class="az-list">
+    <a href="#">Target<span>salaries</span></a><a href="#">Tata<span>salaries</span></a><a href="/salary/what-salary-does-tcs-pay">TCS<span>salaries</span></a><a href="#">Tech Mahindra<span>salaries</span></a><a href="#">Tekion<span>salaries</span></a><a href="#">TEKsystems<span>salaries</span></a><a href="#">Teleperformance<span>salaries</span></a><a href="#">Tesco<span>salaries</span></a><a href="#">Testbook<span>salaries</span></a><a href="#">Talentica<span>salaries</span></a><a href="#">Thoughtworks<span>salaries</span></a><a href="#">Times Internet<span>salaries</span></a><a href="#">Tokopedia<span>salaries</span></a><a href="#">Toppr<span>salaries</span></a><a href="#">To The New<span>salaries</span></a><a href="#">Turvo<span>salaries</span></a><a href="#">Twilio<span>salaries</span></a>
+  </div>
+  <p class="fine" style="margin-top:10px!important;color:var(--soft)">All letters render in the HTML (about 300 links). The letter buttons only scroll. "tata_consultancy_services" is merged into TCS.</p>
+</section>
+
+<section class="wrap block prose"><span class="fx" aria-hidden="true">8</span>
+  <h2>Where these salaries come from</h2>
+  <p>Every number on these pages comes from salaries shared by candidates on Weekday. We show the <b>fixed salary</b> (CTC minus bonus and stock), drop the top and bottom 5% to remove typos, and report the <b>median</b> and the middle 50%. Companies with fewer than 30 salaries are left out until we have enough data.</p>
+  <p>Want to know what a number means in your bank account? Use the <a href="/in-hand-salary-calculator">in-hand salary calculator</a>, or read <a href="/post/ctc-meaning-in-hand-salary">CTC vs in-hand salary</a>. Comparing roles rather than companies? See our 2026 guides for <a href="/post/data-scientist-salary-in-india-2026">data scientists</a>, <a href="/post/full-stack-developer-salary-in-india-2026">full stack developers</a> and <a href="/post/product-manager-salary-in-india-2026">product managers</a>.</p>
+</section>
+
+<section class="wrap block faq"><span class="fx" aria-hidden="true">9</span>
+  <h2>Salary FAQs</h2>
+  <details open><summary>Which company pays the highest salary in India?<span class="chev"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><p>At 2–3 years of experience, Google (₹39.6 LPA median), Meesho and Apple (₹33 LPA) pay the most among companies with enough data on Weekday.</p></details>
+  <details><summary>Which IT services company pays the most?<span class="chev"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><p>At 2–3 years, Accenture and Capgemini lead at ₹9.9 LPA median, followed by Infosys (₹9.7 LPA). TCS is ₹8.8 LPA.</p></details>
+  <details><summary>Are these salaries CTC or in-hand?<span class="chev"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><p>They are fixed CTC per year, excluding bonus and stock. In-hand is usually 80–90% of CTC divided by 12.</p></details>
+</section>
+
+<section class="wrap block"><span class="fx" aria-hidden="true">10</span>
+  <h2>Know the pay. Now find the job.</h2>
+  <div class="jobstrip">
+    <a class="tool" href="https://jobs.weekday.works/?q=Software%20Engineer"><b>Software engineering jobs</b><span>Live roles at TCS, Infosys, startups and GCCs</span></a>
+    <a class="tool" href="https://jobs.weekday.works/?q=Data"><b>Data, ML and AI jobs</b><span>Data engineers, scientists and AI engineers</span></a>
+    <a class="tool" href="https://jobs.weekday.works/?q=Product%20Manager"><b>Product management jobs</b><span>APM to group PM roles</span></a>
+  </div>
+</section>
+
+<section class="wrap block devnotes" id="devnotes">
+  <h2>What changed vs the live page</h2>
+  <p class="dn-lede">Numbers match the yellow markers on the page. Live today = what /salary shows on 13 Oct 2026. URL stays /salary.</p>
+  <ol class="notes">
+    <li><span class="fx static">1</span><div><p class="n-t">Title, meta and H1 <span class="n-tag">P0</span></p><p class="n-d">Live today: the title is "Weekday - Find real salaries", the meta is "Find salaries of companies by role" and the H1 is "Search Salaries for Companies". Change the title to "Company Salaries in India 2026: 300+ Companies, Real Data | Weekday" and the H1 to "Company Salaries in India (2026)". Add a lede with the company count, the salary count and the month it was updated, all filled server-side.</p></div></li>
+    <li><span class="fx static">2</span><div><p class="n-t">Visible breadcrumb <span class="n-tag">P1</span></p><p class="n-d">Show Home › Salaries on the page. It's the parent level that every company page's breadcrumb points to.</p></div></li>
+    <li><span class="fx static">3</span><div><p class="n-t">Search: one action, a clear empty state <span class="n-tag">P1</span></p><p class="n-d">Live today: there are two pill inputs, the button stays grey, and the area below says "Search your desired salaries" with nothing under it. Keep the company + role search, but autocomplete companies from the 300 we have and send the user straight to that company's page. The role dropdown sets ?role= on the company page, which already canonicals to the base URL, so that's fine.</p></div></li>
+    <li><span class="fx static">4</span><div><p class="n-t">Popular searches <span class="n-tag">P1</span></p><p class="n-d">Six links using the words people actually type ("TCS salary"). Pick them from the highest-volume company terms: deloitte 2,500, tcs 2,100, accenture 1,700, infosys 1,600 searches a month.</p></div></li>
+    <li><span class="fx static">5</span><div><p class="n-t">Tool strip <span class="n-tag">P1</span></p><p class="n-d">Links to the in-hand calculator, the salary hike calculator and the CTC guide. Today the hub doesn't link to either calculator.</p></div></li>
+    <li><span class="fx static">6</span><div><p class="n-t">Categories with a median next to each company <span class="n-tag">P1</span></p><p class="n-d">Live today: 7 groups (FAANG, Indian MNCs, Consulting, Banks, MNCs, Indian banks, Startups) with names only, and a typo ("Micosoft"). Keep the groups, but show the 2–3 yr median next to each name, give each group an id (#it-services) for the breadcrumb, and add a link to the full group.</p></div></li>
+    <li><span class="fx static">7</span><div><p class="n-t">A–Z directory of every company <span class="n-tag">P0</span></p><p class="n-d">Live today: the hub links only 37 of the 300 company pages, and so does every company page, so 263 pages are reachable only from the sitemap. Render all indexable companies as plain &lt;a&gt; links in the HTML, grouped by letter. The letter buttons only scroll the page. Leave out noindexed companies and merged duplicates.</p></div></li>
+    <li><span class="fx static">8</span><div><p class="n-t">150–200 words on the method <span class="n-tag">P1</span></p><p class="n-d">Live today: about 790 words, almost all of it navigation. Explain where the data comes from, fixed vs total pay, the trimming, and the 30-salary minimum. <b>Amogha, please confirm the data source line</b> (is it from profile signup, or from applications?).</p></div></li>
+    <li><span class="fx static">9</span><div><p class="n-t">Hub FAQs <span class="n-tag">P1</span></p><p class="n-d">New. Questions that span companies ("highest paying company in India", "which IT company pays the most", "CTC or in-hand?"), answered from the medians. Add FAQPage JSON-LD.</p></div></li>
+    <li><span class="fx static">10</span><div><p class="n-t">3 job links instead of 37 categories <span class="n-tag">P1</span></p><p class="n-d">Live today: "Know the pay — now find the job" lists 37 categories, including Maritime and Emergency Services. Keep only the categories people who check salaries care about (tech, data, product), each linking to jobs.weekday.works.</p></div></li>
+  </ol>
+
+  <div class="code-grid">
+    <div><h3>&lt;head&gt; for /salary</h3><pre><code>&lt;title&gt;Company Salaries in India 2026: 300+ Companies, Real Data | Weekday&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;See real fixed salaries at 300+ companies in India for 2026: TCS, Infosys, Deloitte, Google, Razorpay and more. Median pay by role and experience.&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://www.weekday.works/salary&quot;&gt;</code></pre></div>
+    <div><h3>Schema for /salary</h3><pre><code>KEEP  WebPage, BreadcrumbList, Organization, WebSite
+ADD   CollectionPage with ItemList:
+      one ListItem per company page
+      { &quot;@type&quot;: &quot;ListItem&quot;, &quot;position&quot;: 1,
+        &quot;name&quot;: &quot;TCS salaries&quot;,
+        &quot;url&quot;: &quot;https://www.weekday.works/salary/what-salary-does-tcs-pay&quot; }
+ADD   FAQPage (marker 9)</code></pre></div>
+  </div>
+
+  <h3 class="st-h">All /salary page types (checked 13 Oct 2026)</h3>
+  <div class="st-wrap"><table class="st">
+    <thead><tr><th>Page type</th><th>Example</th><th>Count</th><th>Status</th><th>Mock</th></tr></thead>
+    <tbody>
+      <tr><td>Hub</td><td><code>/salary</code></td><td>1</td><td><span class="part">Redesign</span></td><td>This file</td></tr>
+      <tr><td>Company page, enough data</td><td><code>/salary/what-salary-does-tcs-pay</code></td><td>~290</td><td><span class="part">Redesign</span></td><td>Company page mock</td></tr>
+      <tr><td>Company page, thin data</td><td><code>/salary/what-salary-does-weekday-pay</code></td><td>tbd</td><td><span class="part">Hide thin roles</span></td><td>Company mock, note 9 + thin-data box</td></tr>
+      <tr><td>Role filter state</td><td><code>?role=frontend</code></td><td>—</td><td><span class="ok">OK</span></td><td>Canonicals to base. Keep.</td></tr>
+      <tr><td>Not a company</td><td><code>freelancer, self_employed</code></td><td>3</td><td><span class="part">noindex</span></td><td>—</td></tr>
+      <tr><td>Duplicate company</td><td><code>tata_consultancy_services</code></td><td>4 pairs</td><td><span class="part">canonical</span></td><td>—</td></tr>
+      <tr><td>Role page (new, P2)</td><td><code>/what-salary-does-tcs-pay/data-engineer</code></td><td>new</td><td><span class="part">P2</span></td><td>Same layout as company page, filtered to one role</td></tr>
+    </tbody>
+  </table></div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div><a class="brand" href="/"><span>Weekday</span></a><p>Hire and get hired faster.</p></div>
+    <div><h3>Salaries</h3><a href="/salary">All company salaries</a><a href="/in-hand-salary-calculator">In-hand salary calculator</a><a href="/salary-hike-calculator">Salary hike calculator</a><a href="/post/ctc-meaning-in-hand-salary">CTC vs in-hand</a></div>
+    <div><h3>Jobs by role</h3><a href="/jobs/backend-developer-jobs">Backend developer</a><a href="/jobs/frontend-developer-jobs">Frontend developer</a><a href="/jobs/data-scientist-jobs">Data scientist</a><a href="/jobs/product-manager-jobs">Product manager</a></div>
+    <div><h3>Weekday</h3><a href="/jobs">All job categories</a><a href="/our-story">Our story</a><a href="/blog">Blog</a><a href="/privacy">Privacy</a></div>
+  </div>
+</footer>
+<script>
+(function(){
+  var b=document.body, t=document.getElementById('annToggle');
+  t.addEventListener('click',function(){
+    var on=b.classList.toggle('annot');
+    t.setAttribute('aria-pressed',on);
+    t.textContent=on?'Hide fix markers':'Show fix markers';
+  });
+  document.querySelectorAll('a[href^="/"],a[href="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){ if(a.getAttribute('href').indexOf('#')!==0||a.getAttribute('href')==='#') e.preventDefault(); });
+  });
+})();
+</script>
+</body>
+</html>
